@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="wip-godot-wild-jam-81-more-like-21-haha"
+run/main_scene="uid://dmb84exi3gw0n"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

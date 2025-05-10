@@ -1,10 +1,70 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwjwqp0q1c5x3"]
+[gd_scene load_steps=8 format=3 uid="uid://dwjwqp0q1c5x3"]
 
-[ext_resource type="Texture2D" uid="uid://be5xi2cwsylyx" path="res://icon.svg" id="1_ws04o"]
+[ext_resource type="Script" uid="uid://cw86rlrnknlli" path="res://plr.gd" id="1_j2olp"]
+[ext_resource type="Texture2D" uid="uid://bj1sp7gxahloc" path="res://DialBox.png" id="1_unb2m"]
+[ext_resource type="Texture2D" uid="uid://ctgsdoeno18d0" path="res://Sprite-0001.png" id="1_ws04o"]
+[ext_resource type="FontFile" uid="uid://boyk5umtad5qk" path="res://Orange Kid.otf" id="2_2knq7"]
+[ext_resource type="Script" uid="uid://2bf5rx3lhsnt" path="res://dia_box.gd" id="2_j2olp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4rdd"]
+atlas = ExtResource("1_ws04o")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4rdd"]
+size = Vector2(8, 16)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(240, 240)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_j2olp")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("1_ws04o")
+texture_filter = 1
+texture = SubResource("AtlasTexture_i4rdd")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(2.5, 2.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_i4rdd")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DiaBox" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.0
+offset_top = -226.0
+offset_right = 225.0
+offset_bottom = -136.0
+grow_horizontal = 2
+texture = ExtResource("1_unb2m")
+script = ExtResource("2_j2olp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/DiaBox"]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 437.0
+offset_bottom = 80.0
+theme_override_constants/outline_size = 7
+theme_override_fonts/normal_font = ExtResource("2_2knq7")
+theme_override_font_sizes/normal_font_size = 29
+text = "Hello and welcome to Combzone!
+In this game, you will have to collect items, located all around the zone, and then deposit them to receive coins and EXP!
+You can use EXP to open new zones, and use coins to buy new perks or items!"
+scroll_active = false
+scroll_following = true

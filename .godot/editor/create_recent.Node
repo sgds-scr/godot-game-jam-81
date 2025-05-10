@@ -1,0 +1,9 @@
+CollisionShape2D
+Camera2D
+Sprite2D
+RichTextLabel
+TextureRect
+Control
+CharacterBody2D
+Node2D
+ColorRect

@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1746877616
+DialBox.png::CompressedTexture2D::3072915481880650658::1746877198::1746877202::1::::<><><>0<>0<>e6d1ce56ed23ab2d98c5a21f0a4b6afa<>res://.godot/imported/DialBox.png-8cce0ac140552540bf634f3055776e9d.ctex::
+icon.svg::CompressedTexture2D/CompressedTexture2D::2730519590296544659::1746868230::1746868251::1::::<><><>0<>0<>ef37db043bc93581ec6db42e39559be6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+Orange Kid.otf::FontFile::3419271374335882650::1746877616::1746877617::1::::<><><>0<>0<>2ec8a123950f2506e1531d15826e990c<>res://.godot/imported/Orange Kid.otf-2a254a3b738a5543f5dd8844bf472235.fontdata::
+plr.tscn::PackedScene::8723361184678082322::1746876309::0::1::::<><><>0<>0<><>::uid://ctgsdoeno18d0::::res://Sprite-0001.png
+README.md::TextFile/TextFile::-1::1746868230::0::1::::<><><>0<>0<><>::
+Sprite-0001-sheet.png::CompressedTexture2D::7453931707079722488::1746872429::1746872452::1::::<><><>0<>0<>74d7b965ef3330ec47da000f22d4378e<>res://.godot/imported/Sprite-0001-sheet.png-c7b5a71e9bacd41f5e1a72619cdd6714.ctex::
+Sprite-0001.png::CompressedTexture2D/CompressedTexture2D::6119914668401236179::1746873762::1746873893::1::::<><><>0<>0<>2b95a6b1d2b7b60655c96509278e9312<>res://.godot/imported/Sprite-0001.png-7647bf9f8b536d839277d4b64aee9852.ctex::
+zone1.tscn::PackedScene::8005648247299351911::1746876310::0::1::::<><><>0<>0<><>::uid://ctgsdoeno18d0::::res://Sprite-0001.png<>uid://dwjwqp0q1c5x3::::res://plr.tscn
+::res://Sprites/::1746868251
+Dirt-zone1.png::CompressedTexture2D/CompressedTexture2D::7347900322290982878::1746868230::1746868251::1::::<><><>0<>0<>44a58a3742ac65b977bd41d544c0082b<>res://.godot/imported/Dirt-zone1.png-67e523d6684beec2b6e2decc8b29e681.ctex::
+Grass-zone1.png::CompressedTexture2D/CompressedTexture2D::3952771694725476702::1746868230::1746868251::1::::<><><>0<>0<>c45807037b7e3643deac8e6e6c207fca<>res://.godot/imported/Grass-zone1.png-fdefc41b909af365f1aaf721d46f6f29.ctex::
+Tree-zone1.png::CompressedTexture2D/CompressedTexture2D::5452155399030811500::1746868230::1746868251::1::::<><><>0<>0<>9ba530fd2e34d727e0208c0b299a3402<>res://.godot/imported/Tree-zone1.png-3932ec66eff3f53c72c044bbaa77ba6c.ctex::
+TreeStump-zone1.png::CompressedTexture2D/CompressedTexture2D::3830761638974335967::1746868230::1746868251::1::::<><><>0<>0<>47461adea04fd73c016b1bb5ca6fca84<>res://.godot/imported/TreeStump-zone1.png-74bf027be474858ce36b1ed532d896cd.ctex::
+TreeStumpTop-zone1.png::CompressedTexture2D/CompressedTexture2D::4801862297040568423::1746868230::1746868251::1::::<><><>0<>0<>d3dadcbd2e4a7de2fef158eb57599f5d<>res://.godot/imported/TreeStumpTop-zone1.png-5dd99598fdf4ee9a9491227f2692c6cb.ctex::
