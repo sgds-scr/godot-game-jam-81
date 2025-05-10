@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://bp7e8a5o382p6"]
+
+[ext_resource type="Script" uid="uid://bi3r4ujjxnmu8" path="res://menu.gd" id="1_mae5d"]
+[ext_resource type="Texture2D" uid="uid://dsd5j778adtvf" path="res://Play.png" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://bc5th8u3vtmdq" path="res://LogoLarge.png" id="2_mae5d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hy44"]
+atlas = ExtResource("1_ouk20")
+region = Rect2(0, 0, 256, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytr4m"]
+atlas = ExtResource("1_ouk20")
+region = Rect2(256, 0, 256, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l48gv"]
+atlas = ExtResource("1_ouk20")
+region = Rect2(512, 0, 256, 75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ecwwl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hy44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytr4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l48gv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mae5d")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.119416, 0.293649, 0.273735, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(240, 306)
+sprite_frames = SubResource("SpriteFrames_ecwwl")
+autoplay = "default"
+frame_progress = 0.7973
+
+[node name="Button" type="Button" parent="AnimatedSprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -37.5
+offset_right = -128.0
+offset_bottom = -37.5
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="LogoLarge" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(240, 126)
+scale = Vector2(2.72917, 2.72917)
+texture = ExtResource("2_mae5d")
+
+[connection signal="pressed" from="AnimatedSprite2D/Button" to="." method="_on_button_pressed"]

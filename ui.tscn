@@ -1,0 +1,169 @@
+[gd_scene load_steps=8 format=3 uid="uid://wbujp2hd513d"]
+
+[ext_resource type="Texture2D" uid="uid://bj1sp7gxahloc" path="res://DialBox.png" id="1_27fn8"]
+[ext_resource type="Script" uid="uid://2bf5rx3lhsnt" path="res://dia_box.gd" id="2_nltto"]
+[ext_resource type="FontFile" uid="uid://boyk5umtad5qk" path="res://Orange Kid.otf" id="3_ibotj"]
+[ext_resource type="Texture2D" uid="uid://b3i8de6mcajol" path="res://Inevntory.png" id="4_y4yjw"]
+[ext_resource type="Texture2D" uid="uid://nm6si54wnte0" path="res://ItemSpritesheet.png" id="5_y4yjw"]
+[ext_resource type="Texture2D" uid="uid://bfb451obggudo" path="res://Coin.png" id="6_ok7cu"]
+[ext_resource type="Texture2D" uid="uid://cxxlddqtd43qk" path="res://EXP.png" id="7_irxef"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DiaBox" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.0
+offset_top = 16.0
+offset_right = 225.0
+offset_bottom = 106.0
+grow_horizontal = 2
+texture = ExtResource("1_27fn8")
+script = ExtResource("2_nltto")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DiaBox"]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 437.0
+offset_bottom = 80.0
+theme_override_constants/outline_size = 7
+theme_override_fonts/normal_font = ExtResource("3_ibotj")
+theme_override_font_sizes/normal_font_size = 29
+text = "Hello and welcome to Combzone!
+In this game, you will have to collect items, located all around the zone, and then deposit them to receive coins and EXP!
+You can use EXP to open new zones, and use coins to buy new perks or items!"
+scroll_active = false
+scroll_following = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = -90.0
+offset_right = 412.0
+offset_bottom = -16.0
+grow_vertical = 0
+texture = ExtResource("4_y4yjw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 14.0
+offset_right = -14.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="1" type="Sprite2D" parent="TextureRect/HBoxContainer"]
+position = Vector2(22, 22.9483)
+scale = Vector2(2.75, 2.74353)
+texture = ExtResource("5_y4yjw")
+hframes = 11
+
+[node name="2" type="Sprite2D" parent="TextureRect/HBoxContainer"]
+position = Vector2(87, 23)
+scale = Vector2(2.75, 2.75)
+texture = ExtResource("5_y4yjw")
+hframes = 11
+frame = 4
+
+[node name="3" type="Sprite2D" parent="TextureRect/HBoxContainer"]
+position = Vector2(151.5, 23.5)
+scale = Vector2(2.8125, 2.8125)
+texture = ExtResource("5_y4yjw")
+hframes = 11
+frame = 2
+
+[node name="4" type="Sprite2D" parent="TextureRect/HBoxContainer"]
+position = Vector2(216.5, 23.5)
+scale = Vector2(2.8125, 2.8125)
+texture = ExtResource("5_y4yjw")
+hframes = 11
+frame = 5
+
+[node name="5" type="Sprite2D" parent="TextureRect/HBoxContainer"]
+position = Vector2(281, 23)
+scale = Vector2(2.75, 2.75)
+texture = ExtResource("5_y4yjw")
+hframes = 11
+frame = 9
+
+[node name="6" type="Sprite2D" parent="TextureRect/HBoxContainer"]
+position = Vector2(346, 23)
+scale = Vector2(2.75, 2.75)
+texture = ExtResource("5_y4yjw")
+hframes = 11
+frame = 9
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 2
+offset_left = 15.0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 59.0
+
+[node name="Coin" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_ok7cu")
+
+[node name="Label" type="Label" parent="Coin"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 3.0
+offset_right = 87.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.866667, 0.678431, 0.172549, 1)
+theme_override_colors/font_shadow_color = Color(0.657964, 0.530283, 0.242721, 1)
+theme_override_colors/font_outline_color = Color(0.581677, 0.423496, 0.113002, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ibotj")
+theme_override_font_sizes/font_size = 25
+text = "COIN"
+
+[node name="Exp" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture = ExtResource("7_irxef")
+
+[node name="Label" type="Label" parent="Exp"]
+layout_mode = 0
+offset_left = -45.0
+offset_top = 1.0
+offset_right = -4.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.219608, 0.25098, 0.690196, 1)
+theme_override_colors/font_outline_color = Color(0.313726, 0.517647, 0.67451, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ibotj")
+theme_override_font_sizes/font_size = 25
+text = "EXP"
+horizontal_alignment = 2

@@ -1,5 +1,7 @@
 res://plr.tscn
-res://uhhidkrlylol.tscn
 res://zone1.tscn
+res://ui.tscn
 res://dia_box.gd
-res://plr.gd
+res://menu.gd
+res://menu.tscn
+res://both.tscn
